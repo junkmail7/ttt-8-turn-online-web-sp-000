@@ -27,7 +27,6 @@ def valid_move?(board, index)
 
 end
 
-
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, index)
   if board[index] == " " || board[index] == "" || board[index] == nil
@@ -39,8 +38,8 @@ end
 
 def turn (board)
   puts "Please enter 1-9:"
-  num = gets.chomp
-  index = input_to_index(num)
+  user = gets.chomp
+  index = input_to_index(user)
   if valid_move?(board, index) == true
     move(board, index)
     display_board(board)
